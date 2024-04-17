@@ -16,7 +16,7 @@ if response.status_code == 200:
     estado = data['uf']
     cep = data['cep']
     
-with open("Endereços.csv", "w") as enderecos:
+with open("Endereços.csv", "w",encoding="utf-8") as enderecos:
     writer = csv.writer(enderecos)
     writer.writerow([rua,bairro,cidade , estado,cep])
 
